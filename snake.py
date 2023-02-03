@@ -364,11 +364,11 @@ if __name__ == "__main__":
                     reset_colors()
                     magic_color -= 1
                 last_score = snake.score     
+            last_direction = snake.direction
             for event in events:
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_ESCAPE:
                         game_state='home'
-                    last_direction = snake.direction
                     if event.type == KEYDOWN:
                         if event.key == K_LEFT and last_direction != "right":
                             snake.direction = "left"
@@ -386,6 +386,7 @@ if __name__ == "__main__":
             if snake.x < 1 or snake.x > LEVEL_SETTINGS[level_selection_pointer]['INNER_GRID_WIDTH'] or snake.y < 1 or snake.y > LEVEL_SETTINGS[level_selection_pointer]['INNER_GRID_HEIGHT']:
                 game_over=True
             if game_over:
+                speed_increment=0
                 last_score=snake.score
                 if snake.score >1:
                     history[username][TRANSLATE_POINTER[level_selection_pointer]]=history[username][TRANSLATE_POINTER[level_selection_pointer]]+[snake.score]
