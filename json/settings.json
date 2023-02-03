@@ -4,7 +4,7 @@
          "GRID_WIDTH": 12,
          "INNER_GRID_HEIGHT": 6,
          "INNER_GRID_WIDTH": 10,
-         "SPEED": 200,
+         "SPEED": 150,
          "CELL_SIZE": 80
          },
     "Medium": {

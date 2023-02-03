@@ -164,6 +164,7 @@ if __name__ == "__main__":
                             are_you_sure=False
                             reset_pointers()
                             game_state=last_game_state
+                            k_up_pressed=False
                     if event.key == pygame.K_ESCAPE:
                         running=False
             pygame.display.update()
@@ -334,7 +335,6 @@ if __name__ == "__main__":
             pygame.display.update()
 #-----------------------------GAME SCREEN---------------------------------------
         if game_state=='game':
-            # update_scoreboard(history,scoreboard)
             display_game()
             for event in events:
                 if event.type == pygame.KEYDOWN:
