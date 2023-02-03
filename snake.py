@@ -65,9 +65,23 @@ def reset_game():
     global random_color_1
     global random_color_2
     global random_color_3
+    global speed_increment
     snake = Snake()
     food = Food()
+    speed_increment = 0
     game_over = False
+    random_color_1 = random.choice(all_colors)
+    random_color_2 = random.choice(all_colors)
+    while random_color_1 == random_color_2:
+        random_color_2 = random.choice(all_colors)
+    random_color_3 = random.choice(all_colors)
+    while random_color_3 == random_color_1 or random_color_3 == random_color_2:
+        random_color_3 = random.choice(all_colors)
+
+def reset_colors():
+    global random_color_1
+    global random_color_2
+    global random_color_3
     random_color_1 = random.choice(all_colors)
     random_color_2 = random.choice(all_colors)
     while random_color_1 == random_color_2:
@@ -101,6 +115,7 @@ def display_game():
 if __name__ == "__main__":
     #-------------default states----------------
     game_state='login_screen'
+    speed_increment=0
     new_user=False
     wrong_password=False
     game_over=False
@@ -113,6 +128,9 @@ if __name__ == "__main__":
     new_high_score=False
     blocker=False
     k_up_pressed=False
+    loop_once=False
+    magic_color=3
+    last_score=200
     random_color_1 = random.choice(all_colors)
     random_color_2 = random.choice(all_colors)
     while random_color_1 == random_color_2:
@@ -334,8 +352,18 @@ if __name__ == "__main__":
                         game_state=last_game_state
             pygame.display.update()
 #-----------------------------GAME SCREEN---------------------------------------
-        if game_state=='game':
+        if game_state == 'game':
             display_game()
+            if snake.score != 0 and snake.score % 10 == 0 and snake.score != last_score:
+                if speed_increment != 15:
+                    speed_increment += 3
+                    LEVEL_SETTINGS[level_selection_pointer]['SPEED'] -= speed_increment
+                    print(LEVEL_SETTINGS[level_selection_pointer]['SPEED'])
+                magic_color = 3
+                for _ in range(3):
+                    reset_colors()
+                    magic_color -= 1
+                last_score = snake.score     
             for event in events:
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_ESCAPE:
@@ -358,6 +386,7 @@ if __name__ == "__main__":
             if snake.x < 1 or snake.x > LEVEL_SETTINGS[level_selection_pointer]['INNER_GRID_WIDTH'] or snake.y < 1 or snake.y > LEVEL_SETTINGS[level_selection_pointer]['INNER_GRID_HEIGHT']:
                 game_over=True
             if game_over:
+                last_score=snake.score
                 if snake.score >1:
                     history[username][TRANSLATE_POINTER[level_selection_pointer]]=history[username][TRANSLATE_POINTER[level_selection_pointer]]+[snake.score]
                 history_dumper(history)
