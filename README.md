@@ -8,7 +8,8 @@ This is a simple snake game made with python and pygame. The game has 3 difficul
 
 ### Features
 
-- 3 difficulty levels
+- 3 difficulty levels (easy, medium, hard)
+- Game size, Colors, Map, Speed is all customizable in one Json file
 - Scoreboard
 - Game history
 - Login system
@@ -67,13 +68,21 @@ python snake.py
 
 ### SCREENSHOTS
 
+-Press up or down arrow key to select an option and press enter to validate your choice.
 ![Screenshot](screenshots/login_screen.JPG "Login page")
+-Press up or down arrow key to select an option and press enter to validate your choice.
 ![Screenshot](screenshots/main_menu.JPG "Menu page")
+-Press Space to close the window.
 ![Screenshot](screenshots/scoreboard.JPG "Scoreboard page")
+-Select a difficulty level.
 ![Screenshot](screenshots/select_difficulty.JPG "Select difficulty page")
+-A preview of the gameplay, easy difficulty.
 ![Screenshot](screenshots/easy_gameplay.JPG "Easy Gameplay page")
+-A preview of the gameplay, medium difficulty.
 ![Screenshot](screenshots/medium_gameplay.JPG "Medium Gameplay page")
+-A preview of the gameplay, hard difficulty.
 ![Screenshot](screenshots/hard_gameplay.JPG "Hard Gameplay page")
+-Press Space to close the window.
 ![Screenshot](screenshots/game_history.JPG "Game History page")
 
 ### CREDITS
