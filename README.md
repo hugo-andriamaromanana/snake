@@ -30,9 +30,10 @@ This is a simple snake game made with python and pygame. The game has 3 difficul
 - During the game, if you press the ESC key, the game will be paused and you will be able to go to the main menu or exit the game.
 - During the development of the game, I encountered a problem with my initial repository. I had to create a new repository and copy the files from the old one. I have not been able to find a solution to this problem. I apologize for the inconvenience.
 -To follow my commit history, you can go to the following link:
-    -Initial repository: https://github.com/hugo-andriamaromanana/corrupt_snake.git (6 commits)
-    -Initial repository branch: https://github.com/hugo-andriamaromanana/corrupt_snake/tree/home_menu (38 commits)
-    -New repository: https://github.com/hugo-andriamaromanana/snake 
+
+-Initial repository: https://github.com/hugo-andriamaromanana/corrupt_snake.git (6 commits)
+-Initial repository branch: https://github.com/hugo-andriamaromanana/corrupt_snake/tree/home_menu (38 commits)
+-New repository: https://github.com/hugo-andriamaromanana/snake 
 
 ### How to play
 
@@ -42,12 +43,7 @@ This is a simple snake game made with python and pygame. The game has 3 difficul
 - Use the arrow keys to move the snake
 - Eat the apples to grow
 - Don't hit the walls or yourself
-
-### How to run
-
-- Install python 3.6 or higher
-- Install pygame
-- Run the game with `python snake.py`
+- The game ends when you hit the wall or yourself
 
 ### INSTALLATION
 
