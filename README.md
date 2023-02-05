@@ -70,6 +70,8 @@ python snake.py
 ![Screenshot](screenshots/main_menu.JPG "Menu page")
 -Press Space to close the window.
 ![Screenshot](screenshots/scoreboard.JPG "Scoreboard page")
+-Press Space to close the window.
+![Screenshot](screenshots/game_history.JPG "Game History page")
 -Select a difficulty level.
 ![Screenshot](screenshots/select_difficulty.JPG "Select difficulty page")
 -A preview of the gameplay, easy difficulty.
@@ -78,8 +80,6 @@ python snake.py
 ![Screenshot](screenshots/medium_gameplay.JPG "Medium Gameplay page")
 -A preview of the gameplay, hard difficulty.
 ![Screenshot](screenshots/hard_gameplay.JPG "Hard Gameplay page")
--Press Space to close the window.
-![Screenshot](screenshots/game_history.JPG "Game History page")
 
 ### CREDITS
 
